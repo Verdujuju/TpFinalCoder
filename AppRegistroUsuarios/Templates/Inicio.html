@@ -1,2 +1,14 @@
+{% extends "padre.html" %}
+{% load static %}
+
+{% block cuerpo%}
+
 <a class="list-group-item list-group-item-action list-group-item-light p-3" href={% url 'registro_usuario' %}>Registrarse</a> {% csrf_token %}
-<a class="list-group-item list-group-item-action list-group-item-light p-3" href={% url 'Pagina_de_ingreso' %}>Ingresar</a> {% csrf_token %}
+<br>
+<a class="list-group-item list-group-item-action list-group-item-light p-3" href={% url 'Pagina_de_ingreso' %}>Ingresar</a> 
+<br>
+<a class="list-group-item list-group-item-action list-group-item-light p-3" href={% url 'desconectarse' %}>Desconectarse</a> 
+<br>
+{{ mensaje }}
+
+{% endblock %}
